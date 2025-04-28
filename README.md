@@ -1,4 +1,5 @@
 CinemaApp2025 🎬
+
 CinemaApp2025 is a full-stack web application for managing and exploring cinemas, movies, and screenings.
 It is developed using the latest technologies including ASP.NET Core 8, Entity Framework Core, and SQL Server.
 
