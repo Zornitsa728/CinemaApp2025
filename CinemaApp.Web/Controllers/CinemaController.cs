@@ -29,6 +29,7 @@ namespace CinemaApp.Web.Controllers
                     ImageUrl = c.ImageUrl
                 })
             .ToArray();
+            ViewData["Title"] = "Cinemas";
 
             return View(cinemas);
         }
