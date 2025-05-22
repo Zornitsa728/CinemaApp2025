@@ -2,6 +2,7 @@ using Microsoft.EntityFrameworkCore;
 namespace CinemaApp.Web
 {
     using CinemaApp.Data.Models;
+    using CinemaApp.Web.Infrastructure.Extensions;
     using CInemaApp.Data;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
@@ -56,6 +57,8 @@ namespace CinemaApp.Web
                 pattern: "{controller=Home}/{action=Index}/{id?}");
 
             app.MapRazorPages();
+
+            app.ApplyMigrations();
 
             app.Run();
         }

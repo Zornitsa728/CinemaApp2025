@@ -43,7 +43,7 @@ namespace CinemaApp.Web.Controllers
 
             if (!isReleaseDateValid)
             {
-                this.ModelState.AddModelError(nameof(inputModel.ReleaseDate), "The Release Date must be in the following format: MM/yyyy");
+                this.ModelState.AddModelError(nameof(inputModel.ReleaseDate), String.Format("The Release Date must be in the following format: {0}", ReleaseDateFormat));
             }
 
             if (!this.ModelState.IsValid)
