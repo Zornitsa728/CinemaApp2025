@@ -24,7 +24,6 @@ namespace CinemaApp.Web.Controllers
             IEnumerable<Movie> allMovies = await dbContext
                 .Movies
                 .ToArrayAsync();
-            ViewData["Title"] = "Movies";
 
             return View(allMovies);
         }
