@@ -1,4 +1,4 @@
-﻿namespace CInemaApp.Data
+﻿namespace CinemaApp.Data
 {
     using CinemaApp.Data.Models;
     using Microsoft.AspNetCore.Identity;

@@ -1,4 +1,4 @@
-﻿using CInemaApp.Data;
+﻿using CinemaApp.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;

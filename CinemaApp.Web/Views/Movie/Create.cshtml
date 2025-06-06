@@ -1,4 +1,5 @@
 ﻿@using CinemaApp.Web.ViewModels.Movie;
+@using static CinemaApp.Common.ApplicationConstants;
 @model AddMovieInputModel
 
 <h2>Add a New Movie</h2>
@@ -16,7 +17,7 @@
     </div>
     <div>
         <label for="ReleaseDate">Release Date</label>
-        <input asp-for="ReleaseDate" class="form-control" />
+        <input asp-for="ReleaseDate" class="form-control" placeholder=@ReleaseDateFormat/>
         <span asp-validation-for="ReleaseDate" class="text-danger"></span>
     </div>
     <div>
@@ -33,6 +34,11 @@
         <label for="Description">Description</label>
         <textarea asp-for="Description" class="form-control"></textarea>
         <span asp-validation-for="Description" class="text-danger"></span>
+    </div>
+    <div>
+        <label for="ImageUrl">ImageUrl</label>
+        <input asp-for="ImageUrl" class="form-control" placeholder="Enter Image URL"/>
+        <span asp-validation-for="ImageUrl" class="text-danger"></span>
     </div>
     <button type="submit" class="btn btn-primary mt-2">Create Movie</button>
 </form>

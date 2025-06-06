@@ -1,7 +1,7 @@
-﻿using CinemaApp.Data.Models;
+﻿using CinemaApp.Data;
+using CinemaApp.Data.Models;
 using CinemaApp.Web.ViewModels.Cinema;
 using CinemaApp.Web.ViewModels.Movie;
-using CInemaApp.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System.Globalization;
@@ -59,6 +59,7 @@ namespace CinemaApp.Web.Controllers
                 Director = inputModel.Director,
                 Duration = inputModel.Duration,
                 Description = inputModel.Description,
+                ImageUrl = inputModel.ImageUrl
             };
 
             await dbContext.Movies.AddAsync(movie);

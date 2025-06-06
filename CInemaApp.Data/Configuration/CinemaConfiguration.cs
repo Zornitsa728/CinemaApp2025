@@ -3,7 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using static CinemaApp.Common.EntityValidationConstants.Cinema;
 
-namespace CInemaApp.Data.Configuration
+namespace CinemaApp.Data.Configuration
 {
     public class CinemaConfiguration : IEntityTypeConfiguration<Cinema>
     {

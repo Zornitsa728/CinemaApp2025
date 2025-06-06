@@ -1,9 +1,9 @@
 using Microsoft.EntityFrameworkCore;
 namespace CinemaApp.Web
 {
+    using CinemaApp.Data;
     using CinemaApp.Data.Models;
     using CinemaApp.Web.Infrastructure.Extensions;
-    using CInemaApp.Data;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;

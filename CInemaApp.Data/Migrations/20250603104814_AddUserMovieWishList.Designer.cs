@@ -4,6 +4,7 @@ using CinemaApp.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CinemaApp.Data.Migrations
 {
     [DbContext(typeof(CinemaDbContext))]
-    partial class CinemaDbContextModelSnapshot : ModelSnapshot
+    [Migration("20250603104814_AddUserMovieWishList")]
+    partial class AddUserMovieWishList
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -130,28 +133,28 @@ namespace CinemaApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("44da3a48-f5e3-4a35-99d1-3fd183324111"),
+                            Id = new Guid("0a1139ed-aa71-43ef-8910-35328666c53d"),
                             ImageUrl = "/images/cinema-ruse.jpg",
                             Location = "Ruse",
                             Name = "Cinema City"
                         },
                         new
                         {
-                            Id = new Guid("bdcaf3c4-562b-41f6-b4dc-c66633503162"),
+                            Id = new Guid("8bef01d5-aa76-4101-9cbf-e8fbfee247a5"),
                             ImageUrl = "/images/cinema-plovdiv.jpg",
                             Location = "Plovdiv",
                             Name = "Cinema City"
                         },
                         new
                         {
-                            Id = new Guid("690b6ca2-0e51-4900-8eba-71e8e6465342"),
+                            Id = new Guid("2e57e161-70b5-4f96-a0c7-a19dde6057fb"),
                             ImageUrl = "/images/cinema-varna.png",
                             Location = "Varna",
                             Name = "CinemaMax"
                         },
                         new
                         {
-                            Id = new Guid("6efd6307-df9c-40b8-8955-0585a8dd5e35"),
+                            Id = new Guid("112789ab-18f6-4040-8aeb-e7bbec962061"),
                             ImageUrl = "/images/cinema-sofia.jpeg",
                             Location = "Sofia",
                             Name = "Cinema"
@@ -202,12 +205,6 @@ namespace CinemaApp.Data.Migrations
                         .HasMaxLength(50)
                         .HasColumnType("nvarchar(50)");
 
-                    b.Property<string>("ImageUrl")
-                        .ValueGeneratedOnAdd()
-                        .HasMaxLength(2083)
-                        .HasColumnType("nvarchar(2083)")
-                        .HasDefaultValue("~/images/no-image.jpg");
-
                     b.Property<DateTime>("ReleaseDate")
                         .HasColumnType("datetime2");
 
@@ -223,7 +220,7 @@ namespace CinemaApp.Data.Migrations
                     b.HasData(
                         new
                         {
-                            Id = new Guid("9699479d-dcf9-4b70-b978-eb3b5f18dfda"),
+                            Id = new Guid("008fbab2-6f98-4b4c-8bb4-d8562734d31d"),
                             Description = "In his fourth year at Hogwarts, Harry must reluctantly compete in an ancient wizard tournament after someone mysteriously selects his name, while the Dark Lord secretly conspires something sinister.",
                             Director = "Mike Newel",
                             Duration = 157,
@@ -233,7 +230,7 @@ namespace CinemaApp.Data.Migrations
                         },
                         new
                         {
-                            Id = new Guid("fe952d04-f97f-4341-8d35-b0907c1ca52f"),
+                            Id = new Guid("5de38178-2beb-4d0f-b395-d9dfe17bdc65"),
                             Description = "Twilight is a 2008 American romantic fantasy film directed by Catherine Hardwicke from a screenplay by Melissa Rosenberg, based on the 2005 novel of the same name by Stephenie Meyer. It is the first installment in The Twilight Saga film series.",
                             Director = "Catherine Hardwicke",
                             Duration = 121,

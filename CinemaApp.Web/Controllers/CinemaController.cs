@@ -1,7 +1,7 @@
 ﻿using CinemaApp.Data.Models;
 using CinemaApp.Web.ViewModels.Cinema;
 using CinemaApp.Web.ViewModels.Movie;
-using CInemaApp.Data;
+using CinemaApp.Data;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 
