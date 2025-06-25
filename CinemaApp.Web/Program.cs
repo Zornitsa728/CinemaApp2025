@@ -3,7 +3,9 @@ namespace CinemaApp.Web
 {
     using CinemaApp.Data;
     using CinemaApp.Data.Models;
+    using CinemaApp.Services.Mapping;
     using CinemaApp.Web.Infrastructure.Extensions;
+    using CinemaApp.Web.ViewModels;
     using Microsoft.AspNetCore.Identity;
     using Microsoft.EntityFrameworkCore;
     using Microsoft.Extensions.DependencyInjection;
@@ -27,8 +29,8 @@ namespace CinemaApp.Web
             })
                 .AddEntityFrameworkStores<CinemaDbContext>()
                 .AddRoles<IdentityRole<Guid>>()
-                .AddUserManager<UserManager<ApplicationUser>>()
-                .AddSignInManager<SignInManager<ApplicationUser>>();
+                .AddSignInManager<SignInManager<ApplicationUser>>()
+                .AddUserManager<UserManager<ApplicationUser>>();
 
             builder.Services.ConfigureApplicationCookie(cfg =>
             {
@@ -38,7 +40,9 @@ namespace CinemaApp.Web
             builder.Services.AddControllersWithViews();
             builder.Services.AddRazorPages();
 
-            var app = builder.Build();
+            WebApplication app = builder.Build();
+
+            AutoMapperConfig.RegisterMappings(typeof(ErrorViewModel).Assembly);
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
